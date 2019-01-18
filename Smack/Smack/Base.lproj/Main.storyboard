@@ -53,7 +53,7 @@
                                 <rect key="frame" x="281" y="83.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Bj5-Zb-Ues">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Bj5-Zb-Ues" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="15" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="FzN-rZ-awa"/>
@@ -271,7 +271,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="N6I-LR-VRM">
                                 <rect key="frame" x="62.5" y="123" width="250" height="136"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dr1-R8-XAN">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dr1-R8-XAN">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="BDl-I2-7Fu"/>
@@ -288,7 +288,7 @@
                                             <constraint firstAttribute="width" constant="250" id="igI-Ib-T8L"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAf-2d-p9M">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAf-2d-p9M">
                                         <rect key="frame" x="0.0" y="50" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="vjU-zI-jz4"/>
@@ -305,7 +305,7 @@
                                             <constraint firstAttribute="width" constant="250" id="ran-va-ghi"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRB-G9-spC">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRB-G9-spC">
                                         <rect key="frame" x="0.0" y="100" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="YlW-Z7-rs4"/>
@@ -350,7 +350,7 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="BXI-Np-odZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="BXI-Np-odZ" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="299" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="8Wd-oo-C18"/>
@@ -388,6 +388,10 @@
                                     <action selector="pickAvatarPressed:" destination="t4d-Cy-fYN" eventType="touchUpInside" id="g0w-7P-xhu"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mIq-Ol-IWo">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -395,6 +399,7 @@
                             <constraint firstItem="Uzd-6h-dqg" firstAttribute="width" secondItem="BXI-Np-odZ" secondAttribute="width" id="2aK-lx-mPK"/>
                             <constraint firstItem="BXI-Np-odZ" firstAttribute="top" secondItem="N6I-LR-VRM" secondAttribute="bottom" constant="40" id="2wj-4Z-kPP"/>
                             <constraint firstItem="Uzd-6h-dqg" firstAttribute="centerX" secondItem="zr2-u9-V7c" secondAttribute="centerX" id="5sk-vl-h3H"/>
+                            <constraint firstItem="mIq-Ol-IWo" firstAttribute="centerY" secondItem="zr2-u9-V7c" secondAttribute="centerY" constant="-100" id="9jJ-K1-WO3"/>
                             <constraint firstItem="QJl-qe-20k" firstAttribute="centerX" secondItem="zr2-u9-V7c" secondAttribute="centerX" id="PU4-MM-RuA"/>
                             <constraint firstItem="MZe-sO-oye" firstAttribute="centerX" secondItem="zr2-u9-V7c" secondAttribute="centerX" id="Qxt-4v-EMj"/>
                             <constraint firstItem="N6I-LR-VRM" firstAttribute="top" secondItem="QJl-qe-20k" secondAttribute="bottom" constant="40" id="aim-SE-Fxg"/>
@@ -402,6 +407,7 @@
                             <constraint firstItem="BgL-dc-XOj" firstAttribute="trailing" secondItem="8R4-DN-JyK" secondAttribute="trailing" constant="15" id="hmk-RA-NTK"/>
                             <constraint firstItem="Uzd-6h-dqg" firstAttribute="top" secondItem="BXI-Np-odZ" secondAttribute="top" id="kOS-ud-MF9"/>
                             <constraint firstItem="MZe-sO-oye" firstAttribute="top" secondItem="Uzd-6h-dqg" secondAttribute="bottom" constant="4" id="mYG-H3-xvY"/>
+                            <constraint firstItem="mIq-Ol-IWo" firstAttribute="centerX" secondItem="zr2-u9-V7c" secondAttribute="centerX" id="srZ-Wb-bIy"/>
                             <constraint firstItem="BXI-Np-odZ" firstAttribute="centerX" secondItem="zr2-u9-V7c" secondAttribute="centerX" id="t32-h6-2tA"/>
                             <constraint firstItem="BgL-dc-XOj" firstAttribute="bottom" secondItem="v3y-4c-ZOp" secondAttribute="bottom" constant="20" id="u1t-cv-f7Z"/>
                             <constraint firstItem="8R4-DN-JyK" firstAttribute="top" secondItem="BgL-dc-XOj" secondAttribute="top" constant="8" id="wbI-Mp-7eN"/>
@@ -412,6 +418,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="RAf-2d-p9M" id="VQh-hm-fOS"/>
                         <outlet property="passTxt" destination="gRB-G9-spC" id="RcN-c1-AaZ"/>
+                        <outlet property="spinner" destination="mIq-Ol-IWo" id="DKX-2o-dK7"/>
                         <outlet property="userImg" destination="BXI-Np-odZ" id="MUs-TQ-fVF"/>
                         <outlet property="userNameTxt" destination="Dr1-R8-XAN" id="tDO-i3-39n"/>
                         <segue destination="Kue-n7-pwE" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="sQu-ab-ciC"/>
