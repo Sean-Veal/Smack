@@ -176,7 +176,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Kds-Df-EnX">
                                 <rect key="frame" x="62.5" y="160" width="250" height="86"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jG7-j7-NOW">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jG7-j7-NOW">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="2wu-nr-7Nc"/>
@@ -193,7 +193,7 @@
                                             <constraint firstAttribute="height" constant="2" id="PLa-6F-mBH"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XkR-3E-SBw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XkR-3E-SBw">
                                         <rect key="frame" x="0.0" y="50" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="IWt-eF-SfG"/>
@@ -228,7 +228,14 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="a9B-VE-v7i" eventType="touchUpInside" id="EzT-wd-zXc"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gCF-w1-n18">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -236,9 +243,11 @@
                             <constraint firstItem="4cT-EM-XOV" firstAttribute="top" secondItem="Kds-Df-EnX" secondAttribute="bottom" constant="40" id="63h-7o-vVS"/>
                             <constraint firstItem="xUm-yt-YcV" firstAttribute="centerX" secondItem="ib4-Em-fgj" secondAttribute="centerX" id="7sI-hf-xB3"/>
                             <constraint firstItem="7Lt-Uk-URm" firstAttribute="centerX" secondItem="ib4-Em-fgj" secondAttribute="centerX" id="CmB-ai-McC"/>
+                            <constraint firstItem="gCF-w1-n18" firstAttribute="centerX" secondItem="ib4-Em-fgj" secondAttribute="centerX" id="Mwa-vD-eTZ"/>
                             <constraint firstItem="e94-Ao-IVE" firstAttribute="trailing" secondItem="M88-TF-64V" secondAttribute="trailing" constant="15" id="NoH-Fq-lEq"/>
                             <constraint firstItem="4cT-EM-XOV" firstAttribute="centerX" secondItem="ib4-Em-fgj" secondAttribute="centerX" id="TWH-nR-oZS"/>
                             <constraint firstItem="7Lt-Uk-URm" firstAttribute="top" secondItem="e94-Ao-IVE" secondAttribute="top" constant="60" id="aph-Oh-MVD"/>
+                            <constraint firstItem="gCF-w1-n18" firstAttribute="centerY" secondItem="ib4-Em-fgj" secondAttribute="centerY" constant="-100" id="giT-1b-Yv1"/>
                             <constraint firstItem="Kds-Df-EnX" firstAttribute="top" secondItem="7Lt-Uk-URm" secondAttribute="bottom" constant="40" id="iSz-IA-NPp"/>
                             <constraint firstItem="xUm-yt-YcV" firstAttribute="top" secondItem="4cT-EM-XOV" secondAttribute="bottom" id="uFV-WK-At7"/>
                             <constraint firstItem="M88-TF-64V" firstAttribute="top" secondItem="e94-Ao-IVE" secondAttribute="top" constant="8" id="yM1-Vz-qQ6"/>
@@ -246,6 +255,9 @@
                         <viewLayoutGuide key="safeArea" id="e94-Ao-IVE"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="jG7-j7-NOW" id="kl6-fw-u3T"/>
+                        <outlet property="passwordTxt" destination="XkR-3E-SBw" id="JZr-8A-NxY"/>
+                        <outlet property="spinner" destination="gCF-w1-n18" id="J1x-tc-7SB"/>
                         <segue destination="t4d-Cy-fYN" kind="show" identifier="toCreateAccount" id="z9f-XK-8uE"/>
                     </connections>
                 </viewController>
