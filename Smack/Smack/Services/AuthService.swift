@@ -117,7 +117,6 @@ class AuthService {
     func findUserByEmail(email: String, completion: @escaping CompletionHandler) {
         Alamofire.request("\(URL_USER_BY_EMAIL)\(email)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
-                debugPrint(response.result.value!)
                 guard let data = response.data else {return}
                 self.setUserInfo(data: data)
                 completion(true)

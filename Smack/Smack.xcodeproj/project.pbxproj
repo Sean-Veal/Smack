@@ -22,6 +22,9 @@
 		151BA4DC21EEA49F007CB350 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151BA4DB21EEA49F007CB350 /* RoundedButton.swift */; };
 		157CCF7E21F4D5330052FA54 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157CCF7C21F4D5330052FA54 /* ProfileVC.swift */; };
 		157CCF7F21F4D5330052FA54 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157CCF7D21F4D5330052FA54 /* ProfileVC.xib */; };
+		157CCF8221F534600052FA54 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157CCF8121F534600052FA54 /* MessageService.swift */; };
+		157CCF8421F534C00052FA54 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157CCF8321F534C00052FA54 /* Channel.swift */; };
+		157CCF8621F5428B0052FA54 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157CCF8521F5428B0052FA54 /* ChannelCell.swift */; };
 		15AF875021EEDDDD00524501 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF874F21EEDDDD00524501 /* UserDataService.swift */; };
 		15AF875221EEF40D00524501 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF875121EEF40D00524501 /* AvatarPickerVC.swift */; };
 		15AF875421EEF87600524501 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF875321EEF87600524501 /* AvatarCell.swift */; };
@@ -49,6 +52,9 @@
 		151BA4DB21EEA49F007CB350 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		157CCF7C21F4D5330052FA54 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		157CCF7D21F4D5330052FA54 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		157CCF8121F534600052FA54 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		157CCF8321F534C00052FA54 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		157CCF8521F5428B0052FA54 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		15AF874F21EEDDDD00524501 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		15AF875121EEF40D00524501 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		15AF875321EEF87600524501 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 				151BA4DB21EEA49F007CB350 /* RoundedButton.swift */,
 				15AF875321EEF87600524501 /* AvatarCell.swift */,
 				15BDF53D21F16F7E004F47FE /* CircleImage.swift */,
+				157CCF8521F5428B0052FA54 /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 		150EF1CB21EDA6C80033D4F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				157CCF8321F534C00052FA54 /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 			children = (
 				151BA4D921EE9A5B007CB350 /* AuthService.swift */,
 				15AF874F21EEDDDD00524501 /* UserDataService.swift */,
+				157CCF8121F534600052FA54 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,10 +320,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				157CCF7E21F4D5330052FA54 /* ProfileVC.swift in Sources */,
+				157CCF8621F5428B0052FA54 /* ChannelCell.swift in Sources */,
 				150EF1CF21EDA70A0033D4F3 /* ChannelVC.swift in Sources */,
 				15AF875221EEF40D00524501 /* AvatarPickerVC.swift in Sources */,
 				151BA4DC21EEA49F007CB350 /* RoundedButton.swift in Sources */,
+				157CCF8421F534C00052FA54 /* Channel.swift in Sources */,
 				15BDF53E21F16F7E004F47FE /* CircleImage.swift in Sources */,
+				157CCF8221F534600052FA54 /* MessageService.swift in Sources */,
 				150EF1CD21EDA6F60033D4F3 /* ChatVC.swift in Sources */,
 				15AF875021EEDDDD00524501 /* UserDataService.swift in Sources */,
 				151BA4D621EE80E9007CB350 /* CreateAccountVC.swift in Sources */,
