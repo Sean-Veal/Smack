@@ -585,6 +585,7 @@
                         <viewLayoutGuide key="safeArea" id="agA-ZY-sat"/>
                     </view>
                     <connections>
+                        <outlet property="channelNameLbl" destination="ZUD-BS-x5e" id="X5E-B8-tsh"/>
                         <outlet property="menuBtn" destination="i61-bl-rPh" id="U8Z-Gn-7RE"/>
                     </connections>
                 </viewController>
