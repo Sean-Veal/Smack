@@ -54,7 +54,7 @@ class ChatVC: UIViewController {
     }
     
     func updateWithChannel() {
-        let channelName = MessageService.instance.selectedChannel?.channelTitle ?? "" {
+        if let channelName = MessageService.instance.selectedChannel?.channelTitle {
             channelNameLbl.text = "#\(channelName)"
         }
     }
