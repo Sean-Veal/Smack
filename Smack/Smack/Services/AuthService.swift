@@ -77,6 +77,7 @@ class AuthService {
                     self.userEmail = json["email"].stringValue
                     self.authToken = json["token"].stringValue
                 } catch {
+                    completion(false)
                     debugPrint(error)
                 }
                 
